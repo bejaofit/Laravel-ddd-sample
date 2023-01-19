@@ -18,7 +18,7 @@ final class TableRepository extends EloquentRepository implements TableRepositor
     public function findById(TableId $id): ?Table
     {
         /** @var TableAR|null $table */
-        $table = TableAR::query()->find($id->value(), TableAR::class);
+        $table = TableAR::query()->where(['id' => $id->value()])->first();
 
         if (is_null($table)) {
             return null;
@@ -35,6 +35,6 @@ final class TableRepository extends EloquentRepository implements TableRepositor
         /** @var TableAR[] $tables */
         $tables = TableAR::query()->get();
 
-        return array_map(fn (TableAR $table) => Table::autoHydrate($table), $tables);
+        return array_map(fn(TableAR $table) => Table::autoHydrate($table), $tables);
     }
 }

@@ -13,7 +13,6 @@ use Bejao\Shared\Framework\ObjectHelper;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
-use JsonException;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionProperty;
@@ -42,7 +41,6 @@ abstract class BaseEntity
     }
 
     /**
-
      * @return void
      */
     protected function makeCheckPoint(): void

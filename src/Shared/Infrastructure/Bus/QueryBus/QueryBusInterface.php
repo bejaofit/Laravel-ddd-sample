@@ -3,7 +3,6 @@
 namespace Bejao\Shared\Infrastructure\Bus\QueryBus;
 
 
-
 interface QueryBusInterface
 {
     /**

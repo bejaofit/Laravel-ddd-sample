@@ -8,7 +8,7 @@ final class TableAR extends Model
 {
     protected $table = 'tables';
     public $incrementing = false;
-    protected $fillable= [
+    protected $fillable = [
         'id',
         'guests',
         'bookId',

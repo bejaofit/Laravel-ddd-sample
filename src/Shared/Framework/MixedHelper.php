@@ -138,7 +138,7 @@ final class MixedHelper
      * @param T $class
      * @return T[]
      */
-    public static function getIdentityArray(array $array,  $class): array
+    public static function getIdentityArray(array $array, $class): array
     {
         return array_map(function ($item) use ($class) {
             return $class::create($item);

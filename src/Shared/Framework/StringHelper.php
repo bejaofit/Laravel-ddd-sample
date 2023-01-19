@@ -76,7 +76,8 @@ final class StringHelper
         return str_replace($currencies, '', $string);
     }
 
-    public static function isHTML(string $string): bool{
+    public static function isHTML(string $string): bool
+    {
         return ($string != strip_tags($string));
     }
 

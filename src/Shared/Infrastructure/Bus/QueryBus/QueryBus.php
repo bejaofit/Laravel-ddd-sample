@@ -15,7 +15,6 @@ final class QueryBus implements QueryBusInterface
     public array $routes = [];
 
 
-
     public function query(QueryInterface $query)
     {
         $key = get_class($query);

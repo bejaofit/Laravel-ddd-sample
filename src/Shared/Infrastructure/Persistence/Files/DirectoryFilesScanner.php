@@ -17,7 +17,7 @@ final class DirectoryFilesScanner
      */
     public function scan(string $directoryName): array
     {
-        $directoryName = self::BASE_IMPORT_DIRECTORY.$directoryName;
+        $directoryName = self::BASE_IMPORT_DIRECTORY . $directoryName;
         if (!is_dir($directoryName)) {
             throw new RuntimeException("Directory " . $directoryName . " not found");
         }
@@ -36,7 +36,7 @@ final class DirectoryFilesScanner
         $filesIt->rewind();
 
         $files = [];
-        while($filesIt->valid()) {
+        while ($filesIt->valid()) {
             $files[$filesIt->getSubPath()][] = $filesIt->key();
             $filesIt->next();
         }

@@ -20,7 +20,7 @@ final class SimpleEventBus implements EventBusInterface
 
             $eventModel = EventModelAR::create($event);
             if ($eventModel->userId === null) {
-                $userId =(int) Auth::id();
+                $userId = (int)Auth::id();
                 $event->userId = $userId;
                 $eventModel->userId = $event->userId;
             }

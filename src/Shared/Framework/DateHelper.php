@@ -31,7 +31,7 @@ final class DateHelper
         }
         if ($seconds < self::DAY * 4) {
             $days = floor($seconds / self::DAY);
-            $hours = round(($seconds - $days * self::DAY)/(60*60), 1);
+            $hours = round(($seconds - $days * self::DAY) / (60 * 60), 1);
             return $days . ' days ' . $hours . ' hours';
         }
         return (floor($seconds / self::DAY)) . ' days';

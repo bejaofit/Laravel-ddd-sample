@@ -34,7 +34,7 @@ abstract class BaseEnum
             if (self::isValidValue($value, false === is_numeric($value))) {
                 $enum->value = $value;
             } else {
-                throw new InvalidEnumException(static::class . ' - ' . self::class . ' -' . $value.'-');
+                throw new InvalidEnumException(static::class . ' - ' . self::class . ' -' . $value . '-');
             }
         } catch (ReflectionException $e) {
             Log::error($e->getMessage());
@@ -221,6 +221,7 @@ abstract class BaseEnum
     {
         return $this->value;
     }
+
     /**
      * @return string
      */

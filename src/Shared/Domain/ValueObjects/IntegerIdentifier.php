@@ -5,7 +5,7 @@ namespace Bejao\Shared\Domain\ValueObjects;
 
 use Bejao\Shared\Domain\Exceptions\InvalidIdentifierException;
 
-abstract class IntegerIdentifier implements IdentifierInterface,\JsonSerializable
+abstract class IntegerIdentifier implements IdentifierInterface, \JsonSerializable
 {
     private int $value;
 
@@ -21,7 +21,6 @@ abstract class IntegerIdentifier implements IdentifierInterface,\JsonSerializabl
         }
         return new static($intValue);
     }
-
 
 
     /**
@@ -72,7 +71,8 @@ abstract class IntegerIdentifier implements IdentifierInterface,\JsonSerializabl
         return (string)$this->value;
     }
 
-    public function jsonSerialize():int {
+    public function jsonSerialize(): int
+    {
         return $this->value;
     }
 }

@@ -30,6 +30,6 @@ class EchoLogger implements LoggerInterface
 
     private function output(string $type, string $message): void
     {
-        echo " [".$type."] ".$message."\n";
+        echo " [" . $type . "] " . $message . "\n";
     }
 }

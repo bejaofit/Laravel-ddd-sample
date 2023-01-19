@@ -2,7 +2,6 @@
 
 namespace Bejao\Shared\Infrastructure\Bus\ProjectionBus;
 
-use Bejao\Shared\Application\Commands\CommandInterface;
 use Bejao\Shared\Application\Projections\ProjectionInterface;
 use Bejao\Shared\Framework\Container;
 use RuntimeException;

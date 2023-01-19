@@ -5,7 +5,6 @@ namespace Bejao\Shared\Infrastructure\Persistence;
 use Bejao\Shared\Domain\Entities\BaseEntity;
 use Bejao\Shared\Domain\ValueObjects\AutoIncrementIdentifier;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 abstract class EloquentRepository
 {

@@ -38,9 +38,9 @@ abstract class SlowIntegerIdentifier extends IntegerIdentifier
     /**
      * @return int
      */
-    public static function generateId():int
+    public static function generateId(): int
     {
-        return (int) ((microtime(true) - 1657558535) * 100000);
+        return (int)((microtime(true) - 1657558535) * 100000);
     }
 
 

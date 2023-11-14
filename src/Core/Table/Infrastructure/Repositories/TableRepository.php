@@ -33,8 +33,8 @@ final class TableRepository extends EloquentRepository implements TableRepositor
     public function findAll(): array
     {
         /** @var TableAR[] $tables */
-        $tables = TableAR::query()->get();
+        $tables = TableAR::query()->get()->toBase()->all();
 
-        return array_map(fn(TableAR $table) => Table::autoHydrate($table), $tables);
+        return array_map(static fn(TableAR $table) => Table::autoHydrate($table), $tables);
     }
 }

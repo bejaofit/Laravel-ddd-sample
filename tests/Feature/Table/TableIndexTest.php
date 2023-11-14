@@ -22,7 +22,6 @@ final class TableIndexTest extends TestCase
         $response = $this->get('/api/tables');
 
         //then we should get a 200 response with the table
-
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertEquals($command->id->value(), $response->json('0.id'));
 
